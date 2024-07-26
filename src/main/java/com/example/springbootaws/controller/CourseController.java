@@ -55,5 +55,14 @@ public class CourseController {
             : ResponseEntity.notFound().build();
     }
 
+    @GetMapping(value = "/health")
+    public String health() {
+        return "I am healthy";
+    }
+
+    @GetMapping(value = "/welcome")
+    public String welcome() {
+        return "Welcome to Spring Boot AWS...If you see this message, then your CI/CD pipeline is working fine.";
+    }
     
 }
